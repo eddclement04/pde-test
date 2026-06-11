@@ -1,45 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Contact</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Perspective Designs & Estimates for design, drafting, estimating, BOQ, material list, and project support services in Saint Lucia.">
+  <title>Contact | PDE</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header>
-<img src="logo.png" class="logo">
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="services.html">Services</a>
-<a href="projects.html">Projects</a>
-<a href="capability.html">Capability</a>
-</nav>
+<header class="site-header">
+  <a href="index.html" class="brand" aria-label="Perspective Designs & Estimates home">
+    <img src="logo.png" class="logo" alt="PDE logo">
+  </a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="capability.html">Capability</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <a href="contact.html" class="nav-cta">Get a Quote</a>
 </header>
 
-<section class="section">
-<h1>Contact Us</h1>
+<main>
+  <section class="page-hero">
+    <span class="eyebrow">Contact PDE</span>
+    <h1>Tell us about your project.</h1>
+    <p>Use this page to preview a complete contact layout. The form is a sample display form and must be connected to email, Netlify Forms, Formspree, or another service before final launch.</p>
+  </section>
 
-<p>
-📞 (758) 488-4111<br>
-📧 eddclement04@gmail.com<br>
-📍 Marisule, Gros Islet, Saint Lucia
-</p>
+  <section class="section contact-section">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Start with a short project brief.</h2>
+        <p>Send your idea, drawings, photos, sketch, location, project size, and the type of service needed. PDE can then advise on the next step and the information required.</p>
+        <div class="info-card"><strong>Phone / WhatsApp</strong><span>(758) 488-4111</span></div>
+        <div class="info-card"><strong>Email</strong><span>eddclement04@gmail.com</span></div>
+        <div class="info-card"><strong>Location</strong><span>Marisule, Gros Islet, Saint Lucia</span></div>
+        <div class="info-card"><strong>Service Area</strong><span>Saint Lucia and the wider Caribbean</span></div>
+      </div>
 
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Your Message"></textarea>
-<button type="submit">Send Message</button>
-</form>
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your Name" required>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Your Email" required>
+        <label for="phone">Phone / WhatsApp</label>
+        <input id="phone" type="text" placeholder="Your Phone Number">
+        <label for="service">Service Needed</label>
+        <select id="service">
+          <option>Architectural Drafting</option>
+          <option>Building Design</option>
+          <option>Quantity Surveying / BOQ</option>
+          <option>Material List</option>
+          <option>3D Visualization</option>
+          <option>Project Support</option>
+        </select>
+        <label for="message">Project Details</label>
+        <textarea id="message" placeholder="Tell us about the project location, size, stage, and what you need help with."></textarea>
+        <button type="submit">Send Sample Message</button>
+        <p class="form-note">Sample form only. Connect this to a live form service before final launch.</p>
+      </form>
+    </div>
+  </section>
 
-</section>
+  <section class="section gray">
+    <div class="section-head">
+      <span class="eyebrow">Before contacting</span>
+      <h2>Helpful information to prepare</h2>
+    </div>
+    <div class="grid value-grid">
+      <article class="card"><h3>Project Location</h3><p>Town, site location, parcel details, or general area.</p></article>
+      <article class="card"><h3>Project Type</h3><p>New build, renovation, commercial, residential, BOQ, or visualization.</p></article>
+      <article class="card"><h3>Available Files</h3><p>Sketches, photos, existing drawings, measurements, or approval notes.</p></article>
+      <article class="card"><h3>Deadline</h3><p>Target submission date, tender date, or construction start date.</p></article>
+    </div>
+  </section>
+</main>
 
-<footer>
-<p>© 2026 PDE</p>
+<footer class="site-footer">
+  <div class="footer-bottom">© 2026 Perspective Designs & Estimates. Sample website content for preview.</div>
 </footer>
+
+<a class="whatsapp-float" href="https://wa.me/17584884111" aria-label="Message PDE on WhatsApp">WhatsApp</a>
 
 </body>
 </html>
