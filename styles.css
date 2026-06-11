@@ -130,7 +130,7 @@ nav a.active {
 .eyebrow.light { color: #bcd0ff; }
 
 .hero-text h1 {
-    font-size: clamp(1.9rem, 3.3vw, 3.25rem);
+    font-size: clamp(2.15rem, 3.7vw, 3.65rem);
     line-height: 1.08;
     margin: 0 0 20px;
     font-weight: 800;
