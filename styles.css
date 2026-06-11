@@ -59,7 +59,7 @@ header {
 }
 
 .logo {
-    height: 70px;
+    height: 95px;
     display: block;
 }
 
@@ -783,7 +783,7 @@ footer {
         padding: 16px 5%;
     }
 
-    .logo { height: 60px; }
+    .logo { height: 78px; }
 
     .main-nav,
     nav {
