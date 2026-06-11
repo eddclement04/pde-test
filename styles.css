@@ -38,7 +38,7 @@ p { margin-top: 0; }
 /* HEADER */
 .site-header,
 header {
-    background: var(--dark);
+    background: #f2f4f7;
     padding: 12px 6%;
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 50;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid #d9dee8;
+    box-shadow: 0 6px 20px rgba(17, 24, 39, 0.08);
 }
 
 .brand {
@@ -73,7 +74,7 @@ nav {
 
 .main-nav a,
 nav a {
-    color: #fff;
+    color: var(--dark);
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 0.5px;
@@ -87,7 +88,7 @@ nav a {
 nav a:hover,
 nav a.active {
     border-bottom-color: var(--accent);
-    color: #dbe6ff;
+    color: var(--accent);
 }
 
 .nav-cta {
@@ -689,10 +690,11 @@ button[type="submit"]:hover { background: var(--accent-dark); }
 /* FOOTER */
 .site-footer,
 footer {
-    background: #111827;
-    color: #d8deea;
+    background: #f2f4f7;
+    color: var(--text);
     padding: 0;
     font-size: 0.92rem;
+    border-top: 1px solid #d9dee8;
 }
 
 .footer-grid {
@@ -706,27 +708,27 @@ footer {
 
 .footer-logo { height: 58px; margin-bottom: 14px; }
 
-.footer-grid p { color: #d8deea; margin-bottom: 8px; }
+.footer-grid p { color: var(--muted); margin-bottom: 8px; }
 
 .footer-grid h4 {
-    color: #fff;
+    color: var(--dark);
     margin: 0 0 14px;
 }
 
 .footer-grid a {
     display: block;
-    color: #d8deea;
+    color: var(--text);
     text-decoration: none;
     margin-bottom: 8px;
 }
 
-.footer-grid a:hover { color: #fff; }
+.footer-grid a:hover { color: var(--accent); }
 
 .footer-bottom {
     text-align: center;
     padding: 22px 6%;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #cbd5e1;
+    border-top: 1px solid #d9dee8;
+    color: var(--muted);
 }
 
 .whatsapp-float {
