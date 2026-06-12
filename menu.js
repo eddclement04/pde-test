@@ -37,4 +37,26 @@ document.addEventListener('DOMContentLoaded', function () {
       nav.classList.remove('menu-open');
     });
   });
+
+  const backToTopButton = document.createElement('button');
+  backToTopButton.className = 'back-to-top';
+  backToTopButton.type = 'button';
+  backToTopButton.setAttribute('aria-label', 'Scroll back to top');
+  backToTopButton.innerHTML = '↑';
+  document.body.appendChild(backToTopButton);
+
+  function toggleBackToTopButton() {
+    if (window.scrollY > 450) {
+      backToTopButton.classList.add('show');
+    } else {
+      backToTopButton.classList.remove('show');
+    }
+  }
+
+  backToTopButton.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  toggleBackToTopButton();
+  window.addEventListener('scroll', toggleBackToTopButton);
 });
