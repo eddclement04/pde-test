@@ -3,9 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="PDE services include architectural drafting, building design, quantity surveying, estimating, BOQs, material lists, 3D visualization, and project support.">
+  <meta name="description" content="PDE services include architectural drafting, building design, quantity surveying, estimating, BOQs, material lists, 3D visualization, presentation support, and project coordination in Saint Lucia and the Caribbean.">
   <title>Services | PDE</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .service-intro-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .service-intro-grid img,
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .service-intro-grid img {
+      height: 390px;
+    }
+
+    .service-feature-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .service-feature-list div {
+      background: var(--gray);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .expanded-services {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      gap: 28px;
+    }
+
+    .service-expanded-card {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 0;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 14px 36px rgba(26, 34, 56, 0.07);
+    }
+
+    .service-expanded-card:nth-child(even) .service-image {
+      order: 2;
+    }
+
+    .service-image {
+      min-height: 360px;
+    }
+
+    .service-expanded-content {
+      padding: 34px;
+    }
+
+    .service-expanded-content h2 {
+      margin: 10px 0 14px;
+      font-size: clamp(1.6rem, 3vw, 2.25rem);
+    }
+
+    .service-expanded-content p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .service-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .service-mini-block {
+      background: var(--gray);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .service-mini-block h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+    }
+
+    .service-mini-block ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .service-mini-block li {
+      margin-bottom: 6px;
+    }
+
+    .service-process-card {
+      text-align: left;
+    }
+
+    @media (max-width: 950px) {
+      .service-intro-grid,
+      .service-expanded-card {
+        grid-template-columns: 1fr;
+      }
+
+      .service-expanded-card:nth-child(even) .service-image {
+        order: 0;
+      }
+
+      .service-image,
+      .service-intro-grid img {
+        height: 300px;
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .service-feature-list,
+      .service-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .service-expanded-content {
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -28,85 +169,295 @@
   <section class="page-hero">
     <span class="eyebrow">Services</span>
     <h1>Design, estimating, and documentation support for better project decisions.</h1>
-    <p>PDE provides services that help clients develop their ideas, prepare professional drawings, estimate costs, and organize construction information.</p>
+    <p>PDE helps clients develop their ideas, prepare professional drawings, understand construction costs, visualize the final result, and organize project information before work begins.</p>
   </section>
 
   <section class="section">
-    <div class="service-list">
-      <article class="service-detail">
-        <div><span class="card-number">01</span><h2>Architectural Drafting</h2></div>
-        <p>Preparation of planning drawings, floor plans, elevations, sections, roof plans, details, schedules, and presentation sheets for residential and commercial projects.</p>
-        <ul>
-          <li>Existing and proposed layouts</li>
-          <li>Planning and permit-style drawing packages</li>
-          <li>Renovation and extension documentation</li>
-        </ul>
-      </article>
-      <article class="service-detail">
-        <div><span class="card-number">02</span><h2>Building Design</h2></div>
-        <p>Concept design and design development support for new homes, commercial spaces, renovations, and façade improvements.</p>
-        <ul>
-          <li>Space planning and layout options</li>
-          <li>Modern façade and exterior concepts</li>
-          <li>Design coordination with project requirements</li>
-        </ul>
-      </article>
-      <article class="service-detail">
-        <div><span class="card-number">03</span><h2>Quantity Surveying & BOQs</h2></div>
-        <p>Measured quantities and structured cost documents to help clients price works, compare contractor submissions, and manage scope.</p>
-        <ul>
-          <li>Full construction BOQs</li>
-          <li>Material lists and quantity take-offs</li>
-          <li>Budget estimates and cost planning</li>
-        </ul>
-      </article>
-      <article class="service-detail">
-        <div><span class="card-number">04</span><h2>3D Visualization</h2></div>
-        <p>Visual presentations that help clients understand the look and feel of the project before construction begins.</p>
-        <ul>
-          <li>Exterior concept renders</li>
-          <li>Interior layout visualization</li>
-          <li>Design upgrade previews</li>
-        </ul>
-      </article>
-      <article class="service-detail">
-        <div><span class="card-number">05</span><h2>Project Support</h2></div>
-        <p>Practical support during design review, contractor pricing, site queries, and project coordination.</p>
-        <ul>
-          <li>Scope clarification</li>
-          <li>Drawing revisions and coordination</li>
-          <li>Contractor query support</li>
-        </ul>
-      </article>
-      <article class="service-detail">
-        <div><span class="card-number">06</span><h2>Graphic & Presentation Support</h2></div>
-        <p>Clean presentation material for proposals, project boards, capability statements, and development packages.</p>
-        <ul>
-          <li>Presentation sheets</li>
-          <li>Project profiles</li>
-          <li>Business capability material</li>
-        </ul>
-      </article>
+    <div class="service-intro-grid">
+      <div>
+        <span class="eyebrow">How PDE supports you</span>
+        <h2>Clear project information from concept to construction support.</h2>
+        <p>PDE brings design, drafting, estimating, quantity surveying, and visualization into one practical workflow. This helps clients avoid confusion, compare options, understand scope, and communicate clearly with contractors, approval agencies, and project stakeholders.</p>
+        <p>Whether you are planning a new home, renovating a kitchen, preparing a BOQ, reviewing contractor pricing, or presenting a development concept, PDE can help turn scattered project information into an organized project package.</p>
+        <div class="service-feature-list">
+          <div>Design & drafting</div>
+          <div>BOQs & estimates</div>
+          <div>Material lists</div>
+          <div>3D visualization</div>
+        </div>
+      </div>
+      <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" alt="Construction drawings and building planning support">
     </div>
   </section>
 
   <section class="section gray">
     <div class="section-head">
+      <span class="eyebrow">Main services</span>
+      <h2>Detailed service offerings</h2>
+      <p>Each service can be provided individually or combined into a complete design, estimating, and project support package.</p>
+    </div>
+
+    <div class="expanded-services">
+      <article class="service-expanded-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" alt="Architectural drawings and construction documentation">
+        </div>
+        <div class="service-expanded-content">
+          <span class="card-number">01</span>
+          <h2>Architectural Drafting</h2>
+          <p>Architectural drafting converts ideas, sketches, site information, and design decisions into clear drawings that can be reviewed, priced, coordinated, and used to guide construction planning.</p>
+          <p>This service is useful for new buildings, renovations, extensions, commercial fit-outs, proposed layouts, and documentation packages where clear drawings are required before moving forward.</p>
+          <div class="service-columns">
+            <div class="service-mini-block">
+              <h3>What it can include</h3>
+              <ul>
+                <li>Floor plans and roof plans</li>
+                <li>Elevations and sections</li>
+                <li>Door, window, and finish schedules</li>
+                <li>Construction notes and details</li>
+              </ul>
+            </div>
+            <div class="service-mini-block">
+              <h3>Best for</h3>
+              <ul>
+                <li>Planning applications</li>
+                <li>Renovation documentation</li>
+                <li>Contractor pricing</li>
+                <li>Clear project communication</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-expanded-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Modern building design concept">
+        </div>
+        <div class="service-expanded-content">
+          <span class="card-number">02</span>
+          <h2>Building Design</h2>
+          <p>Building design support helps shape the layout, appearance, function, and design direction of a project before detailed documentation begins. PDE focuses on practical design solutions that balance space, cost, appearance, and buildability.</p>
+          <p>This service can help clients test layout options, improve circulation, modernize a façade, plan a residential unit, or develop a concept for a commercial or mixed-use project.</p>
+          <div class="service-columns">
+            <div class="service-mini-block">
+              <h3>What it can include</h3>
+              <ul>
+                <li>Concept layouts</li>
+                <li>Space planning</li>
+                <li>Exterior façade concepts</li>
+                <li>Design development support</li>
+              </ul>
+            </div>
+            <div class="service-mini-block">
+              <h3>Best for</h3>
+              <ul>
+                <li>New homes</li>
+                <li>Building upgrades</li>
+                <li>Rental unit planning</li>
+                <li>Commercial layouts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-expanded-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80" alt="Quantity surveying documents and calculator">
+        </div>
+        <div class="service-expanded-content">
+          <span class="card-number">03</span>
+          <h2>Quantity Surveying, BOQs & Cost Estimating</h2>
+          <p>Quantity surveying and estimating help clients understand the amount of work involved, the materials required, and the likely cost direction of a project. This is one of the most important steps before accepting a contractor price or committing to construction.</p>
+          <p>PDE can prepare structured BOQs, quantity take-offs, cost plans, pricing schedules, and estimate support documents for residential, commercial, and contractor tendering projects.</p>
+          <div class="service-columns">
+            <div class="service-mini-block">
+              <h3>What it can include</h3>
+              <ul>
+                <li>Measured BOQs</li>
+                <li>Trade-by-trade quantities</li>
+                <li>Budget estimates</li>
+                <li>Pricing review support</li>
+              </ul>
+            </div>
+            <div class="service-mini-block">
+              <h3>Best for</h3>
+              <ul>
+                <li>Client budgeting</li>
+                <li>Contractor pricing</li>
+                <li>Tender comparison</li>
+                <li>Scope control</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-expanded-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" alt="Material list and procurement planning on laptop">
+        </div>
+        <div class="service-expanded-content">
+          <span class="card-number">04</span>
+          <h2>Material Lists & Procurement Support</h2>
+          <p>Material lists help clients and contractors understand what materials are required for the project and support better purchasing, planning, and cost control. A clear material list can reduce confusion when ordering materials or comparing supplier prices.</p>
+          <p>PDE can prepare material schedules from drawings, BOQs, or project descriptions, separating items into practical categories for procurement and planning.</p>
+          <div class="service-columns">
+            <div class="service-mini-block">
+              <h3>What it can include</h3>
+              <ul>
+                <li>Concrete and blockwork materials</li>
+                <li>Finishes and painting items</li>
+                <li>Doors, windows, and fixtures</li>
+                <li>Trade-based material breakdowns</li>
+              </ul>
+            </div>
+            <div class="service-mini-block">
+              <h3>Best for</h3>
+              <ul>
+                <li>Purchasing planning</li>
+                <li>Supplier pricing</li>
+                <li>Contractor coordination</li>
+                <li>Budget tracking</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-expanded-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80" alt="3D visualization of modern interior design">
+        </div>
+        <div class="service-expanded-content">
+          <span class="card-number">05</span>
+          <h2>3D Visualization</h2>
+          <p>3D visualization helps clients see the project before construction. It is especially useful when deciding on exterior finishes, interior layouts, roof styles, façade upgrades, materials, lighting feel, and general presentation.</p>
+          <p>PDE can prepare visual concepts for residential, commercial, renovation, and development projects so clients can better understand the design and make informed decisions before spending on construction.</p>
+          <div class="service-columns">
+            <div class="service-mini-block">
+              <h3>What it can include</h3>
+              <ul>
+                <li>Exterior render concepts</li>
+                <li>Interior visualization</li>
+                <li>Before-and-after upgrade visuals</li>
+                <li>Material and colour studies</li>
+              </ul>
+            </div>
+            <div class="service-mini-block">
+              <h3>Best for</h3>
+              <ul>
+                <li>Client presentations</li>
+                <li>Design approvals</li>
+                <li>Renovation planning</li>
+                <li>Marketing visuals</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-expanded-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Project coordination meeting and commercial planning">
+        </div>
+        <div class="service-expanded-content">
+          <span class="card-number">06</span>
+          <h2>Project Support & Coordination</h2>
+          <p>Project support helps clients stay organized when drawings, estimates, contractor questions, revisions, and site decisions need to be coordinated. PDE can assist with practical review and documentation support during planning, pricing, or construction preparation.</p>
+          <p>This service is helpful when clients need clarification notes, revised drawings, scope checks, contractor query support, or a more organized project package.</p>
+          <div class="service-columns">
+            <div class="service-mini-block">
+              <h3>What it can include</h3>
+              <ul>
+                <li>Scope clarification</li>
+                <li>Drawing revisions</li>
+                <li>Contractor query support</li>
+                <li>Project documentation review</li>
+              </ul>
+            </div>
+            <div class="service-mini-block">
+              <h3>Best for</h3>
+              <ul>
+                <li>Project planning</li>
+                <li>Contractor coordination</li>
+                <li>Design changes</li>
+                <li>Construction preparation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="service-expanded-card">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80" alt="Professional presentation graphics and development concept material">
+        </div>
+        <div class="service-expanded-content">
+          <span class="card-number">07</span>
+          <h2>Presentation & Development Support</h2>
+          <p>Presentation support helps projects look organized and professional when they need to be shared with clients, investors, stakeholders, approval agencies, or internal decision-makers.</p>
+          <p>PDE can prepare project profiles, concept sheets, capability material, development summaries, and presentation boards that combine drawings, visuals, scope information, and cost-related notes.</p>
+          <div class="service-columns">
+            <div class="service-mini-block">
+              <h3>What it can include</h3>
+              <ul>
+                <li>Project presentation sheets</li>
+                <li>Development concept summaries</li>
+                <li>Capability statements</li>
+                <li>Graphic layout support</li>
+              </ul>
+            </div>
+            <div class="service-mini-block">
+              <h3>Best for</h3>
+              <ul>
+                <li>Development proposals</li>
+                <li>Client presentations</li>
+                <li>Approval support packages</li>
+                <li>Business project profiles</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
       <span class="eyebrow">Common deliverables</span>
-      <h2>Documents PDE can prepare</h2>
+      <h2>Documents and packages PDE can prepare</h2>
+      <p>The final deliverables depend on the project scope, but these are common items clients request.</p>
     </div>
     <div class="grid value-grid">
-      <article class="card"><h3>Drawing Sets</h3><p>Plans, elevations, sections, details, notes, and schedules.</p></article>
-      <article class="card"><h3>BOQ Packages</h3><p>Trade-by-trade quantities, descriptions, units, and pricing structure.</p></article>
-      <article class="card"><h3>Material Lists</h3><p>Detailed material breakdowns for procurement and planning.</p></article>
-      <article class="card"><h3>Concept Visuals</h3><p>Rendered images and presentation visuals for design communication.</p></article>
+      <article class="card"><h3>Drawing Sets</h3><p>Plans, elevations, sections, details, notes, schedules, and presentation sheets for review, pricing, and planning.</p></article>
+      <article class="card"><h3>BOQ Packages</h3><p>Trade-by-trade quantities, descriptions, units, assumptions, clarification notes, and pricing structure.</p></article>
+      <article class="card"><h3>Material Lists</h3><p>Detailed material breakdowns organized by trade to support purchasing, procurement, and supplier pricing.</p></article>
+      <article class="card"><h3>Cost Estimates</h3><p>Budget estimates, preliminary cost plans, and pricing support documents for early decision-making.</p></article>
+      <article class="card"><h3>Concept Visuals</h3><p>Rendered images, exterior concepts, interior previews, material studies, and design upgrade visuals.</p></article>
+      <article class="card"><h3>Project Profiles</h3><p>Professional presentation material for proposals, development packages, company profiles, and client review.</p></article>
+    </div>
+  </section>
+
+  <section class="section gray">
+    <div class="section-head">
+      <span class="eyebrow">Service process</span>
+      <h2>How PDE typically works with clients</h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step service-process-card"><span>01</span><h3>Review</h3><p>Review your project idea, drawings, measurements, photos, site information, budget needs, and required deliverables.</p></div>
+      <div class="process-step service-process-card"><span>02</span><h3>Define Scope</h3><p>Clarify what service is needed, what information is missing, and what package will best support your next step.</p></div>
+      <div class="process-step service-process-card"><span>03</span><h3>Prepare Documents</h3><p>Develop drawings, quantities, estimates, visuals, schedules, or project presentation material based on the agreed scope.</p></div>
+      <div class="process-step service-process-card"><span>04</span><h3>Revise & Support</h3><p>Review the package with the client, make required adjustments, and support clarification or coordination where needed.</p></div>
     </div>
   </section>
 
   <section class="cta-band">
     <div>
       <span class="eyebrow light">Not sure what service you need?</span>
-      <h2>Send your project details and PDE can recommend the right package.</h2>
+      <h2>Send your project details and PDE can recommend the right service package.</h2>
+      <p>Share your idea, drawings, photos, measurements, BOQ needs, or project deadline and PDE can help define the next step.</p>
     </div>
     <a href="contact.html" class="btn btn-light">Request Service Advice</a>
   </section>
