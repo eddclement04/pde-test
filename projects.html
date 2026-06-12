@@ -7,221 +7,34 @@
   <title>Projects | PDE</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    .project-filter-wrap {
-      max-width: 1200px;
-      margin: 0 auto 34px;
-      text-align: center;
-    }
-
-    .project-filter-wrap p {
-      color: var(--muted);
-      max-width: 760px;
-      margin: 0 auto 22px;
-    }
-
-    .project-filters {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .filter-btn {
-      border: 1px solid var(--border);
-      background: #fff;
-      color: var(--dark);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-family: inherit;
-      font-size: 0.88rem;
-      font-weight: 800;
-      letter-spacing: 0.3px;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
-      transform: translateY(-1px);
-    }
-
-    .project-card {
-      cursor: pointer;
-    }
-
-    .project-card.is-hidden {
-      display: none;
-    }
-
-    .project-card:focus {
-      outline: 3px solid rgba(0, 68, 237, 0.25);
-      outline-offset: 4px;
-    }
-
-    .project-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(17, 24, 39, 0.72);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 28px;
-      z-index: 200;
-    }
-
-    .project-modal.is-open {
-      display: flex;
-    }
-
-    .project-modal-box {
-      width: min(1100px, 100%);
-      max-height: 90vh;
-      overflow: auto;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35);
-      position: relative;
-    }
-
-    .project-modal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 42px;
-      height: 42px;
-      border: none;
-      border-radius: 50%;
-      background: #fff;
-      color: var(--dark);
-      font-size: 1.5rem;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
-      z-index: 2;
-    }
-
-    .project-modal-layout {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 0;
-    }
-
-    .project-modal-gallery {
-      background: var(--gray);
-      padding: 22px;
-    }
-
-    .project-modal-main-img {
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-      border-radius: 14px;
-      display: block;
-      box-shadow: var(--shadow);
-    }
-
-    .project-thumbs {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 12px;
-    }
-
-    .project-thumb {
-      border: 3px solid transparent;
-      padding: 0;
-      border-radius: 10px;
-      overflow: hidden;
-      cursor: pointer;
-      background: transparent;
-      height: 92px;
-    }
-
-    .project-thumb.active {
-      border-color: var(--accent);
-    }
-
-    .project-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .project-modal-info {
-      padding: 42px 36px;
-    }
-
-    .project-modal-info h2 {
-      margin: 10px 0 14px;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-    }
-
-    .project-modal-info p {
-      color: var(--muted);
-      margin-bottom: 20px;
-    }
-
-    .modal-info-list {
-      display: grid;
-      gap: 10px;
-      padding: 0;
-      margin: 0 0 26px;
-      list-style: none;
-    }
-
-    .modal-info-list li {
-      padding: 12px 14px;
-      border: 1px solid var(--border);
-      background: var(--gray);
-      border-radius: 10px;
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .modal-note {
-      background: var(--accent-soft);
-      color: var(--dark);
-      border-left: 4px solid var(--accent);
-      padding: 16px;
-      border-radius: 10px;
-      font-size: 0.95rem;
-    }
-
-    body.modal-open {
-      overflow: hidden;
-    }
-
-    @media (max-width: 900px) {
-      .project-modal-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .project-modal-main-img {
-        height: 300px;
-      }
-
-      .project-modal-info {
-        padding: 28px 22px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .project-modal {
-        padding: 14px;
-      }
-
-      .project-thumbs {
-        grid-template-columns: 1fr;
-      }
-
-      .project-thumb {
-        height: 110px;
-      }
-    }
+    .project-filter-wrap { max-width: 1200px; margin: 0 auto 34px; text-align: center; }
+    .project-filter-wrap p { color: var(--muted); max-width: 760px; margin: 0 auto 22px; }
+    .project-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .filter-btn { border: 1px solid var(--border); background: #fff; color: var(--dark); padding: 10px 16px; border-radius: 999px; font-family: inherit; font-size: 0.88rem; font-weight: 800; letter-spacing: 0.3px; cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s; }
+    .filter-btn:hover, .filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); transform: translateY(-1px); }
+    .project-card { cursor: pointer; }
+    .project-card.is-hidden { display: none; }
+    .project-card:focus { outline: 3px solid rgba(0, 68, 237, 0.25); outline-offset: 4px; }
+    .project-modal { position: fixed; inset: 0; background: rgba(17, 24, 39, 0.72); display: none; align-items: center; justify-content: center; padding: 28px; z-index: 200; }
+    .project-modal.is-open { display: flex; }
+    .project-modal-box { width: min(1100px, 100%); max-height: 90vh; overflow: auto; background: #fff; border-radius: 18px; box-shadow: 0 28px 70px rgba(0, 0, 0, 0.35); position: relative; }
+    .project-modal-close { position: absolute; top: 16px; right: 16px; width: 42px; height: 42px; border: none; border-radius: 50%; background: #fff; color: var(--dark); font-size: 1.5rem; font-weight: 900; cursor: pointer; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18); z-index: 2; }
+    .project-modal-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; }
+    .project-modal-gallery { background: var(--gray); padding: 22px; }
+    .project-modal-main-img { width: 100%; height: 430px; object-fit: cover; border-radius: 14px; display: block; box-shadow: var(--shadow); }
+    .project-thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px; }
+    .project-thumb { border: 3px solid transparent; padding: 0; border-radius: 10px; overflow: hidden; cursor: pointer; background: transparent; height: 92px; }
+    .project-thumb.active { border-color: var(--accent); }
+    .project-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .project-modal-info { padding: 42px 36px; }
+    .project-modal-info h2 { margin: 10px 0 14px; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+    .project-modal-info p { color: var(--muted); margin-bottom: 20px; }
+    .modal-info-list { display: grid; gap: 10px; padding: 0; margin: 0 0 26px; list-style: none; }
+    .modal-info-list li { padding: 12px 14px; border: 1px solid var(--border); background: var(--gray); border-radius: 10px; color: var(--text); font-weight: 600; }
+    .modal-note { background: var(--accent-soft); color: var(--dark); border-left: 4px solid var(--accent); padding: 16px; border-radius: 10px; font-size: 0.95rem; }
+    body.modal-open { overflow: hidden; }
+    @media (max-width: 900px) { .project-modal-layout { grid-template-columns: 1fr; } .project-modal-main-img { height: 300px; } .project-modal-info { padding: 28px 22px; } }
+    @media (max-width: 600px) { .project-modal { padding: 14px; } .project-thumbs { grid-template-columns: 1fr; } .project-thumb { height: 110px; } }
   </style>
 </head>
 <body>
@@ -264,97 +77,7 @@
       </div>
     </div>
 
-    <div class="project-grid full-projects" id="projectGrid">
-      <article class="project-card" tabindex="0" role="button" data-category="residential" data-title="Modern Hillside Residence" data-label="Residential Design" data-detail="A residential design support package focused on concept development, practical planning, exterior design direction, and early budget guidance." data-services="Floor plan development; Exterior façade concept; Budget estimate support; Client presentation visuals" data-gallery="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Modern residential home">
-        <div class="project-content"><span class="tag">Residential Design</span><h3>Modern Hillside Residence</h3><p>Concept design, planning drawings, exterior development, and preliminary cost estimate support for private residential construction.</p><ul><li>Floor plan development</li><li>Exterior façade concept</li><li>Budget estimate support</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="residential" data-title="Single-Family Home Package" data-label="Residential Design" data-detail="A complete residential planning package for a family home, balancing comfortable living spaces, efficient circulation, and a clean modern appearance." data-services="Concept layout options; Planning drawing support; Room schedule coordination; Preliminary area review" data-gallery="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80" alt="Contemporary house exterior">
-        <div class="project-content"><span class="tag">Residential Design</span><h3>Single-Family Home Package</h3><p>Design development and drawing preparation for a comfortable family residence with practical indoor and outdoor living spaces.</p><ul><li>Concept layout options</li><li>Planning drawing support</li><li>Room schedule coordination</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="residential" data-title="Apartment Layout Concept" data-label="Residential Design" data-detail="A compact apartment planning concept focused on efficient room arrangement, rental usability, circulation, and practical construction documentation." data-services="Unit layout planning; Space efficiency review; Drawing documentation; Area schedule support" data-gallery="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600566753376-12c8ab8e17a9?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80" alt="Modern house front elevation">
-        <div class="project-content"><span class="tag">Residential Design</span><h3>Apartment Layout Concept</h3><p>Residential planning support for compact apartment layouts, circulation, space usage, and cost-sensitive design decisions.</p><ul><li>Unit layout planning</li><li>Space efficiency review</li><li>Drawing documentation</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="commercial" data-title="Small Office Fit-Out" data-label="Commercial" data-detail="A commercial interior package focused on efficient space planning, work zones, finishes coordination, and quantity take-off support." data-services="Interior layout planning; Finishes and door schedules; Material quantity list; Furniture layout support" data-gallery="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Commercial office interior">
-        <div class="project-content"><span class="tag">Commercial</span><h3>Small Office Fit-Out</h3><p>Space planning, furniture layout, finishes schedule, and quantity take-off support for commercial renovation and fit-out work.</p><ul><li>Interior layout planning</li><li>Finishes and door schedules</li><li>Material quantity list</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="commercial" data-title="Retail & Service Space" data-label="Commercial" data-detail="A commercial space planning concept designed to improve customer movement, service flow, display areas, and back-of-house function." data-services="Space planning; Display and service zones; Basic finishes coordination; Layout option review" data-gallery="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt="Open office work area">
-        <div class="project-content"><span class="tag">Commercial</span><h3>Retail & Service Space</h3><p>Layout and presentation support for small commercial spaces requiring clear customer flow and practical back-of-house planning.</p><ul><li>Space planning</li><li>Display and service zones</li><li>Basic finishes coordination</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="commercial" data-title="Business Facility Upgrade" data-label="Commercial" data-detail="A commercial building improvement package focused on existing condition review, proposed layouts, exterior concepts, and upgrade coordination." data-services="Existing condition review; Proposed layout drawings; Exterior concept support; Scope coordination" data-gallery="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="Commercial building exterior">
-        <div class="project-content"><span class="tag">Commercial</span><h3>Business Facility Upgrade</h3><p>Design and documentation support for commercial building improvements, façade updates, and functional layout revisions.</p><ul><li>Existing condition review</li><li>Proposed layout drawings</li><li>Exterior concept support</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="quantity-surveying" data-title="Contractor Tender Package" data-label="Quantity Surveying" data-detail="A structured tender support package prepared to help contractors and clients review trade quantities, scope descriptions, and pricing requirements." data-services="Concrete and blockwork quantities; Finishes and painting breakdown; Clarification notes; Trade-by-trade BOQ structure" data-gallery="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80" alt="Construction site">
-        <div class="project-content"><span class="tag">Quantity Surveying</span><h3>Contractor Tender Package</h3><p>Measured BOQ, trade descriptions, scope notes, and pricing structure to support contractor pricing and client review.</p><ul><li>Concrete and blockwork quantities</li><li>Finishes and painting breakdown</li><li>Clarification notes</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="quantity-surveying" data-title="Material List Development" data-label="Quantity Surveying" data-detail="A detailed material breakdown prepared from drawings and BOQ information to support procurement planning and project budgeting." data-services="Trade material breakdown; Unit and quantity review; Procurement planning support; Assumption and clarification notes" data-gallery="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80" alt="Documents and calculator on desk">
-        <div class="project-content"><span class="tag">Quantity Surveying</span><h3>Material List Development</h3><p>Detailed material breakdowns prepared from drawings and BOQ information to support procurement and cost planning.</p><ul><li>Trade material breakdown</li><li>Unit and quantity review</li><li>Procurement planning support</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="quantity-surveying" data-title="Budget Cost Plan" data-label="Quantity Surveying" data-detail="An early-stage cost planning package to help clients understand budget direction, major cost drivers, and scope risks before full tendering." data-services="Preliminary budget estimate; Scope assumptions; Cost risk notes; High-level trade breakdown" data-gallery="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80" alt="Construction planning work">
-        <div class="project-content"><span class="tag">Quantity Surveying</span><h3>Budget Cost Plan</h3><p>Early-stage cost planning support to help clients understand likely project cost before proceeding into full design or tendering.</p><ul><li>Preliminary budget estimate</li><li>Scope assumptions</li><li>Cost risk notes</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="renovation" data-title="Kitchen & Living Upgrade" data-label="Renovation" data-detail="A residential renovation concept focused on improved layout, modern finishes, better storage, and clear visuals before construction begins." data-services="Existing layout review; Modern design concept; 3D preview images; Finish direction" data-gallery="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Modern kitchen renovation">
-        <div class="project-content"><span class="tag">Renovation</span><h3>Kitchen & Living Upgrade</h3><p>Design refresh, layout adjustment, finishes selection, and visualization support for residential improvement projects.</p><ul><li>Existing layout review</li><li>Modern design concept</li><li>3D preview images</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="renovation" data-title="Interior Modernization" data-label="Renovation" data-detail="An interior upgrade package focused on layout refinement, finish coordination, lighting feel, storage planning, and presentation visuals." data-services="Room layout review; Finish coordination; Presentation visuals; Storage and circulation review" data-gallery="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=900&q=80" alt="Modern interior renovation">
-        <div class="project-content"><span class="tag">Renovation</span><h3>Interior Modernization</h3><p>Design support for improving interior layouts, finishes, lighting feel, storage, and overall presentation.</p><ul><li>Room layout review</li><li>Finish coordination</li><li>Presentation visuals</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="renovation" data-title="Residential Extension" data-label="Renovation" data-detail="A drafting and design support package for additions, extensions, and upgrade works connected to existing structures." data-services="Existing and proposed plans; Extension layout planning; Construction notes; Scope coordination" data-gallery="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80" alt="Bathroom renovation interior">
-        <div class="project-content"><span class="tag">Renovation</span><h3>Residential Extension</h3><p>Drafting and design coordination for additions, extensions, and upgrade works connected to existing structures.</p><ul><li>Existing and proposed plans</li><li>Extension layout planning</li><li>Construction notes</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="development" data-title="Industrial Site Planning Package" data-label="Development Support" data-detail="A development support package focused on phasing, site planning, approval support documents, and coordination information for larger project planning." data-services="Phased planning concept; Submission support notes; Infrastructure coordination; Drawing coordination" data-gallery="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80" alt="Industrial construction planning">
-        <div class="project-content"><span class="tag">Development Support</span><h3>Industrial Site Planning Package</h3><p>Phasing notes, approval support documents, drawings, and coordination information for larger development planning.</p><ul><li>Phased planning concept</li><li>Submission support notes</li><li>Infrastructure coordination</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="development" data-title="Approval Support Package" data-label="Development Support" data-detail="A project documentation package for submission support, review response notes, drawing coordination, and agency-related project organization." data-services="Submission document support; Review response notes; Drawing coordination; Package organization" data-gallery="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80" alt="Civil construction site">
-        <div class="project-content"><span class="tag">Development Support</span><h3>Approval Support Package</h3><p>Documentation support for project submissions, review comments, agency coordination, and organized response packages.</p><ul><li>Submission document support</li><li>Review response notes</li><li>Drawing coordination</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="development" data-title="Mixed-Use Planning Concept" data-label="Development Support" data-detail="A feasibility and planning support concept for developments combining residential, commercial, and shared service spaces." data-services="Concept layout options; Project phasing support; Area planning review; Development presentation support" data-gallery="https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=900&q=80" alt="Construction planning and site work">
-        <div class="project-content"><span class="tag">Development Support</span><h3>Mixed-Use Planning Concept</h3><p>Conceptual planning and feasibility support for developments combining residential, commercial, and shared service spaces.</p><ul><li>Concept layout options</li><li>Project phasing support</li><li>Area planning review</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="visualization" data-title="Exterior Render Package" data-label="Visualization" data-detail="A visual presentation package for proposed building exteriors, material finishes, landscape feel, and modern Caribbean design direction." data-services="Day render concept; Material finish study; Landscape presentation; Client approval visuals" data-gallery="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&w=900&q=80" alt="Luxury house exterior">
-        <div class="project-content"><span class="tag">Visualization</span><h3>Exterior Render Package</h3><p>Photorealistic exterior visual previews for proposed modern Caribbean residential and commercial designs.</p><ul><li>Day render concept</li><li>Material finish study</li><li>Landscape presentation</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="visualization" data-title="Interior Design Preview" data-label="Visualization" data-detail="An interior visualization package for reviewing layouts, finishes, furniture placement, lighting feel, and client presentation images." data-services="Interior scene setup; Material and finish study; Client presentation visuals; Layout review support" data-gallery="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="Modern interior visualization">
-        <div class="project-content"><span class="tag">Visualization</span><h3>Interior Design Preview</h3><p>Interior visualization support for layout decisions, furniture planning, finishes, lighting, and presentation images.</p><ul><li>Interior scene setup</li><li>Material and finish study</li><li>Client presentation visuals</li></ul></div>
-      </article>
-
-      <article class="project-card" tabindex="0" role="button" data-category="visualization" data-title="Facade Upgrade Preview" data-label="Visualization" data-detail="A before-and-after style visualization package for exterior upgrades, roof concepts, material changes, and building presentation views." data-services="Before and after visual study; Material palette review; Client approval visuals; Exterior presentation package" data-gallery="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80|https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80">
-        <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=900&q=80" alt="Modern residential render style exterior">
-        <div class="project-content"><span class="tag">Visualization</span><h3>Facade Upgrade Preview</h3><p>Visual concept support for exterior upgrades, material changes, roof concepts, landscape feel, and presentation views.</p><ul><li>Before and after visual study</li><li>Material palette review</li><li>Client approval visuals</li></ul></div>
-      </article>
-    </div>
+    <div class="project-grid full-projects" id="projectGrid"></div>
   </section>
 
   <section class="section gray testimonials-section">
@@ -385,7 +108,7 @@
         <p id="modalProjectDetail"></p>
         <h3>Project Information</h3>
         <ul class="modal-info-list" id="modalServices"></ul>
-        <div class="modal-note">For a final portfolio, these project windows can be updated with real project photos, location, floor area, construction value, client type, and PDE’s exact scope of work.</div>
+        <div class="modal-note">Each project package can include drawings, estimates, visualization, documentation, and coordination support based on the agreed scope of work.</div>
       </div>
     </div>
   </div>
@@ -398,8 +121,29 @@
 <a class="whatsapp-float" href="https://wa.me/17584884111" aria-label="Message PDE on WhatsApp">WhatsApp</a>
 
 <script>
+  const projects = [
+    {cat:'residential', label:'Residential Design', title:'Modern Hillside Residence', img:'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80', detail:'A residential design support package focused on concept development, practical planning, exterior design direction, and early budget guidance.', scope:['Floor plan development','Exterior façade concept','Budget estimate support','Client presentation visuals'], gallery:['https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'residential', label:'Residential Design', title:'Single-Family Home Package', img:'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80', detail:'A complete residential planning package for a family home, balancing comfortable living spaces, efficient circulation, and a clean modern appearance.', scope:['Concept layout options','Planning drawing support','Room schedule coordination','Preliminary area review'], gallery:['https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'residential', label:'Residential Design', title:'Apartment Layout Concept', img:'https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=900&q=80', detail:'A compact apartment planning concept focused on efficient room arrangement, rental usability, circulation, and practical construction documentation.', scope:['Unit layout planning','Space efficiency review','Drawing documentation','Area schedule support'], gallery:['https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600566753376-12c8ab8e17a9?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'commercial', label:'Commercial', title:'Small Office Fit-Out', img:'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80', detail:'A commercial interior package focused on efficient space planning, work zones, finishes coordination, and quantity take-off support.', scope:['Interior layout planning','Finishes and door schedules','Material quantity list','Furniture layout support'], gallery:['https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'commercial', label:'Commercial', title:'Retail & Service Space', img:'https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80', detail:'A commercial space planning concept designed to improve customer movement, service flow, display areas, and back-of-house function.', scope:['Space planning','Display and service zones','Basic finishes coordination','Layout option review'], gallery:['https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'commercial', label:'Commercial', title:'Business Facility Upgrade', img:'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80', detail:'A commercial building improvement package focused on existing condition review, proposed layouts, exterior concepts, and upgrade coordination.', scope:['Existing condition review','Proposed layout drawings','Exterior concept support','Scope coordination'], gallery:['https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'quantity-surveying', label:'Quantity Surveying', title:'Contractor Tender Package', img:'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80', detail:'A structured tender support package prepared to help contractors and clients review trade quantities, scope descriptions, and pricing requirements.', scope:['Concrete and blockwork quantities','Finishes and painting breakdown','Clarification notes','Trade-by-trade BOQ structure'], gallery:['https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'quantity-surveying', label:'Quantity Surveying', title:'Material List Development', img:'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80', detail:'A detailed material breakdown prepared from drawings and BOQ information to support procurement planning and project budgeting.', scope:['Trade material breakdown','Unit and quantity review','Procurement planning support','Assumption and clarification notes'], gallery:['https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'quantity-surveying', label:'Quantity Surveying', title:'Budget Cost Plan', img:'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80', detail:'An early-stage cost planning package to help clients understand budget direction, major cost drivers, and scope risks before full tendering.', scope:['Preliminary budget estimate','Scope assumptions','Cost risk notes','High-level trade breakdown'], gallery:['https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'renovation', label:'Renovation', title:'Kitchen & Living Upgrade', img:'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80', detail:'A residential renovation concept focused on improved layout, modern finishes, better storage, and clear visuals before construction begins.', scope:['Existing layout review','Modern design concept','3D preview images','Finish direction'], gallery:['https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'renovation', label:'Renovation', title:'Interior Modernization', img:'https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=900&q=80', detail:'An interior upgrade package focused on layout refinement, finish coordination, lighting feel, storage planning, and presentation visuals.', scope:['Room layout review','Finish coordination','Presentation visuals','Storage and circulation review'], gallery:['https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'renovation', label:'Renovation', title:'Residential Extension', img:'https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=80', detail:'A drafting and design support package for additions, extensions, and upgrade works connected to existing structures.', scope:['Existing and proposed plans','Extension layout planning','Construction notes','Scope coordination'], gallery:['https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'development', label:'Development Support', title:'Industrial Site Planning Package', img:'https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=900&q=80', detail:'A development support package focused on phasing, site planning, approval support documents, and coordination information for larger project planning.', scope:['Phased planning concept','Submission support notes','Infrastructure coordination','Drawing coordination'], gallery:['https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'development', label:'Development Support', title:'Approval Support Package', img:'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80', detail:'A project documentation package for submission support, review response notes, drawing coordination, and agency-related project organization.', scope:['Submission document support','Review response notes','Drawing coordination','Package organization'], gallery:['https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'development', label:'Development Support', title:'Mixed-Use Planning Concept', img:'https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=900&q=80', detail:'A feasibility and planning support concept for developments combining residential, commercial, and shared service spaces.', scope:['Concept layout options','Project phasing support','Area planning review','Development presentation support'], gallery:['https://images.unsplash.com/photo-1590650046871-92c887180603?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'visualization', label:'Visualization', title:'Exterior Render Package', img:'https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&w=900&q=80', detail:'A visual presentation package for proposed building exteriors, material finishes, landscape feel, and modern Caribbean design direction.', scope:['Day render concept','Material finish study','Landscape presentation','Client approval visuals'], gallery:['https://images.unsplash.com/photo-1600585153490-76fb20a32601?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'visualization', label:'Visualization', title:'Interior Design Preview', img:'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80', detail:'An interior visualization package for reviewing layouts, finishes, furniture placement, lighting feel, and client presentation images.', scope:['Interior scene setup','Material and finish study','Client presentation visuals','Layout review support'], gallery:['https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?auto=format&fit=crop&w=1200&q=80']},
+    {cat:'visualization', label:'Visualization', title:'Facade Upgrade Preview', img:'https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=900&q=80', detail:'A before-and-after style visualization package for exterior upgrades, roof concepts, material changes, and building presentation views.', scope:['Before and after visual study','Material palette review','Client approval visuals','Exterior presentation package'], gallery:['https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80','https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80']}
+  ];
+
+  const grid = document.getElementById('projectGrid');
   const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card[data-category]');
   const modal = document.getElementById('projectModal');
   const modalClose = modal.querySelector('.project-modal-close');
   const modalMainImage = document.getElementById('modalMainImage');
@@ -409,52 +153,62 @@
   const modalProjectDetail = document.getElementById('modalProjectDetail');
   const modalServices = document.getElementById('modalServices');
 
-  filterButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const selectedCategory = button.dataset.filter;
+  function renderProjects(category = 'all') {
+    const visibleProjects = category === 'all' ? projects : projects.filter(project => project.cat === category);
+    grid.innerHTML = visibleProjects.map((project, index) => `
+      <article class="project-card" tabindex="0" role="button" data-index="${projects.indexOf(project)}">
+        <img src="${project.img}" alt="${project.title}">
+        <div class="project-content">
+          <span class="tag">${project.label}</span>
+          <h3>${project.title}</h3>
+          <p>${project.detail}</p>
+          <ul>${project.scope.slice(0, 3).map(item => `<li>${item}</li>`).join('')}</ul>
+        </div>
+      </article>
+    `).join('');
 
-      filterButtons.forEach((btn) => btn.classList.remove('active'));
-      button.classList.add('active');
-
-      projectCards.forEach((card) => {
-        const showCard = selectedCategory === 'all' || card.dataset.category === selectedCategory;
-        card.classList.toggle('is-hidden', !showCard);
+    grid.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('click', () => openProjectModal(projects[card.dataset.index]));
+      card.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openProjectModal(projects[card.dataset.index]);
+        }
       });
+    });
+  }
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      renderProjects(button.dataset.filter);
     });
   });
 
-  function openProjectModal(card) {
-    const images = card.dataset.gallery.split('|');
-    const services = card.dataset.services.split(';');
-
-    modalProjectLabel.textContent = card.dataset.label;
-    modalProjectTitle.textContent = card.dataset.title;
-    modalProjectDetail.textContent = card.dataset.detail;
-    modalMainImage.src = images[0];
-    modalMainImage.alt = card.dataset.title;
-
+  function openProjectModal(project) {
+    modalProjectLabel.textContent = project.label;
+    modalProjectTitle.textContent = project.title;
+    modalProjectDetail.textContent = project.detail;
+    modalMainImage.src = project.gallery[0];
+    modalMainImage.alt = project.title;
     modalThumbs.innerHTML = '';
-    images.forEach((imageUrl, index) => {
+
+    project.gallery.forEach((imageUrl, index) => {
       const thumbButton = document.createElement('button');
       thumbButton.type = 'button';
       thumbButton.className = `project-thumb${index === 0 ? ' active' : ''}`;
-      thumbButton.setAttribute('aria-label', `View image ${index + 1} for ${card.dataset.title}`);
-      thumbButton.innerHTML = `<img src="${imageUrl}" alt="${card.dataset.title} image ${index + 1}">`;
+      thumbButton.setAttribute('aria-label', `View image ${index + 1} for ${project.title}`);
+      thumbButton.innerHTML = `<img src="${imageUrl}" alt="${project.title} image ${index + 1}">`;
       thumbButton.addEventListener('click', () => {
         modalMainImage.src = imageUrl;
-        modalThumbs.querySelectorAll('.project-thumb').forEach((thumb) => thumb.classList.remove('active'));
+        modalThumbs.querySelectorAll('.project-thumb').forEach(thumb => thumb.classList.remove('active'));
         thumbButton.classList.add('active');
       });
       modalThumbs.appendChild(thumbButton);
     });
 
-    modalServices.innerHTML = '';
-    services.forEach((service) => {
-      const li = document.createElement('li');
-      li.textContent = service.trim();
-      modalServices.appendChild(li);
-    });
-
+    modalServices.innerHTML = project.scope.map(item => `<li>${item}</li>`).join('');
     modal.classList.add('is-open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -467,29 +221,11 @@
     document.body.classList.remove('modal-open');
   }
 
-  projectCards.forEach((card) => {
-    card.addEventListener('click', () => openProjectModal(card));
-    card.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        openProjectModal(card);
-      }
-    });
-  });
-
   modalClose.addEventListener('click', closeProjectModal);
+  modal.addEventListener('click', event => { if (event.target === modal) closeProjectModal(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && modal.classList.contains('is-open')) closeProjectModal(); });
 
-  modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-      closeProjectModal();
-    }
-  });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
-      closeProjectModal();
-    }
-  });
+  renderProjects();
 </script>
 
 </body>
