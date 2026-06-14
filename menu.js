@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const serviceIconStyle = document.createElement('style');
   serviceIconStyle.textContent = `
     .service-grid .card:nth-child(1) .card-icon::before,
+    .service-grid .card:nth-child(2) .card-icon::before,
     .service-grid .card:nth-child(4) .card-icon::before,
     .service-grid .card:nth-child(5) .card-icon::before,
     .service-grid .card:nth-child(6) .card-icon::before {
@@ -15,6 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
       height: 32px;
       -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='12' r='8'/%3E%3Cpath d='M27 20L12 56M37 20l15 36M20 38h24M14 56h10M40 56h10M32 20v20'/%3E%3Cpath d='M23 38l9-18 9 18'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
       mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='32' cy='12' r='8'/%3E%3Cpath d='M27 20L12 56M37 20l15 36M20 38h24M14 56h10M40 56h10M32 20v20'/%3E%3Cpath d='M23 38l9-18 9 18'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+    }
+
+    .service-grid .card:nth-child(2) .card-icon::before {
+      width: 32px;
+      height: 32px;
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='black' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 13h35M12 13v43h42V21M12 13c-6 0-6 10 0 10M12 23h8M20 56V23'/%3E%3Cpath d='M27 45V33l10-9 10 9v12H27zM34 45v-8h6v8'/%3E%3Cpath d='M42 10l11 11M49 7l6 6-14 14-7 2 2-7 13-15z'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='black' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 13h35M12 13v43h42V21M12 13c-6 0-6 10 0 10M12 23h8M20 56V23'/%3E%3Cpath d='M27 45V33l10-9 10 9v12H27zM34 45v-8h6v8'/%3E%3Cpath d='M42 10l11 11M49 7l6 6-14 14-7 2 2-7 13-15z'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
     }
 
     .service-grid .card:nth-child(4) .card-icon::before {
