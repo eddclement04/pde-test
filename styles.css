@@ -87,7 +87,20 @@ p { margin-top: 0; }
 .value-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .card { background: #fff; padding: 28px 24px; border: 1px solid var(--border); border-top: 3px solid var(--accent); border-radius: 10px; transition: transform 0.2s, box-shadow 0.2s; }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.card-icon { width: 50px; height: 50px; border-radius: 12px; color: var(--accent); background: var(--accent-soft); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+.card-icon { width: 50px; height: 50px; border-radius: 12px; color: var(--accent); background: var(--accent-soft); margin-bottom: 16px; display: flex; align-items: center; justify-content: center; font-weight: 900; }
+.service-grid .card .card-icon { font-size: 0.95rem; letter-spacing: 0.45px; text-transform: uppercase; }
+.service-grid .card:nth-child(1) .card-icon,
+.service-grid .card:nth-child(3) .card-icon,
+.service-grid .card:nth-child(5) .card-icon,
+.service-grid .card:nth-child(6) .card-icon { font-size: 0; }
+.service-grid .card:nth-child(1) .card-icon::before,
+.service-grid .card:nth-child(3) .card-icon::before,
+.service-grid .card:nth-child(5) .card-icon::before,
+.service-grid .card:nth-child(6) .card-icon::before { font-size: 0.95rem; font-weight: 900; letter-spacing: 0.45px; line-height: 1; }
+.service-grid .card:nth-child(1) .card-icon::before { content: "AD"; }
+.service-grid .card:nth-child(3) .card-icon::before { content: "QS"; }
+.service-grid .card:nth-child(5) .card-icon::before { content: "PS"; }
+.service-grid .card:nth-child(6) .card-icon::before { content: "DS"; }
 .card h3 { margin: 0 0 8px; font-size: 1.12rem; }
 .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 .tall-card { min-height: 220px; }
