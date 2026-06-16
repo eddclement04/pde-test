@@ -39,17 +39,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   siteStyle.textContent = iconCss + `
     .theme-toggle {
+      width: 42px;
+      height: 42px;
       border: 1px solid #cbd5e1;
       background: #ffffff;
       color: #1a2238;
       border-radius: 999px;
-      padding: 10px 13px;
-      font-size: 0.9rem;
-      font-weight: 800;
+      padding: 0;
+      font-size: 1.12rem;
+      font-weight: 900;
       line-height: 1;
       cursor: pointer;
       box-shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
-      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 auto;
     }
 
     .theme-toggle:hover { color: #0044ED; border-color: #0044ED; }
@@ -117,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
     html.dark-mode .back-to-top { background: #0044ED; }
 
     @media (max-width: 760px) {
-      .theme-toggle { padding: 10px 11px; font-size: 0.78rem; }
+      .theme-toggle { width: 40px; height: 40px; font-size: 1rem; }
       html.dark-mode .main-nav,
       html.dark-mode nav { background: #17223a; border-color: #2d3b57; }
       html.dark-mode .main-nav a,
@@ -140,7 +145,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function updateThemeButton() {
       const isDark = document.documentElement.classList.contains('dark-mode');
-      themeButton.textContent = isDark ? '☀ Light' : '🌙 Dark';
+      themeButton.textContent = isDark ? '☀' : '🌙';
+      themeButton.setAttribute('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      themeButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
     }
 
     themeButton.addEventListener('click', function () {
@@ -152,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const cta = header.querySelector('.nav-cta');
     if (cta) {
-      header.insertBefore(themeButton, cta);
+      cta.insertAdjacentElement('afterend', themeButton);
     } else {
       header.appendChild(themeButton);
     }
