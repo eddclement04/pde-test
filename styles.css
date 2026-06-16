@@ -136,7 +136,6 @@ p { margin-top: 0; }
 .service-detail { display: grid; grid-template-columns: minmax(230px, 0.6fr) minmax(0, 1fr) minmax(220px, 0.6fr); gap: 30px; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 28px; box-shadow: 0 10px 26px rgba(26, 34, 56, 0.05); }
 .service-detail h2 { margin: 0; font-size: 1.35rem; }
 .service-detail p { color: var(--muted); margin: 0; }
-
 .contact-grid { max-width: 1150px; margin: 0 auto; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 40px; align-items: start; }
 .contact-info h2 { font-size: 2.2rem; margin: 0 0 16px; }
 .contact-info p { color: var(--muted); }
@@ -229,4 +228,10 @@ button[type="submit"]:hover { background: var(--accent-dark); }
     .whatsapp-float { right: 14px; bottom: 14px; width: 54px; height: 54px; }
     .whatsapp-float::before { width: 31px; height: 31px; }
     .back-to-top { right: 17px; bottom: 82px; width: 46px; height: 46px; }
+}
+
+html.dark-mode .capability-meta span,
+html.dark-mode .capability-meta div span,
+html.dark-mode .capability-summary-card .capability-meta span {
+    color: #ffffff !important;
 }
