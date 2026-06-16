@@ -104,18 +104,32 @@ document.addEventListener('DOMContentLoaded', function () {
     html.dark-mode h1,
     html.dark-mode h2,
     html.dark-mode h3,
-    html.dark-mode h4 { color: #eef3ff; }
+    html.dark-mode h4,
+    html.dark-mode h5,
+    html.dark-mode h6,
+    html.dark-mode strong,
+    html.dark-mode b,
+    html.dark-mode label,
+    html.dark-mode .info-card strong,
+    html.dark-mode .footer-grid h4,
+    html.dark-mode .deliverable-item strong,
+    html.dark-mode .service-feature-list div,
+    html.dark-mode .filter-btn:not(.active),
+    html.dark-mode .modal-info-list li { color: #eef3ff !important; }
     html.dark-mode .main-nav a:hover,
     html.dark-mode .main-nav a.active,
     html.dark-mode nav a:hover,
-    html.dark-mode nav a.active { color: #7aa2ff; border-bottom-color: #7aa2ff; }
+    html.dark-mode nav a.active,
+    html.dark-mode .site-footer a:hover,
+    html.dark-mode footer a:hover { color: #7aa2ff !important; border-bottom-color: #7aa2ff; }
     html.dark-mode .hero-split,
     html.dark-mode .section.gray,
     html.dark-mode .capabilities,
     html.dark-mode .contact-form,
     html.dark-mode .service-feature-list div,
     html.dark-mode .service-mini-block,
-    html.dark-mode .capability-meta div { background: #0f172a !important; }
+    html.dark-mode .capability-meta div,
+    html.dark-mode .modal-info-list li { background: #0f172a !important; }
     html.dark-mode .card,
     html.dark-mode .stat,
     html.dark-mode .project-card,
@@ -128,8 +142,11 @@ document.addEventListener('DOMContentLoaded', function () {
     html.dark-mode .deliverable-item,
     html.dark-mode input,
     html.dark-mode textarea,
-    html.dark-mode select { background: #17223a !important; border-color: #2d3b57 !important; color: #eef3ff !important; }
+    html.dark-mode select,
+    html.dark-mode .filter-btn:not(.active) { background: #17223a !important; border-color: #2d3b57 !important; color: #eef3ff !important; }
     html.dark-mode p,
+    html.dark-mode li,
+    html.dark-mode small,
     html.dark-mode .two-col p,
     html.dark-mode .section-head p,
     html.dark-mode .card p,
@@ -139,9 +156,16 @@ document.addEventListener('DOMContentLoaded', function () {
     html.dark-mode .footer-grid p,
     html.dark-mode .footer-bottom,
     html.dark-mode .clean-list,
+    html.dark-mode .clean-list li,
     html.dark-mode .capability-list,
+    html.dark-mode .capability-list li,
     html.dark-mode .service-mini-block ul,
-    html.dark-mode .deliverable-item span { color: #aebbd0 !important; }
+    html.dark-mode .service-mini-block li,
+    html.dark-mode .deliverable-item span,
+    html.dark-mode .site-footer a,
+    html.dark-mode footer a,
+    html.dark-mode footer li,
+    html.dark-mode .footer-grid a { color: #d7deea !important; }
     html.dark-mode .card-icon,
     html.dark-mode .capability-icon,
     html.dark-mode .stat-icon,
