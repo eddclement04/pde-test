@@ -59,6 +59,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
     .theme-toggle:hover { color: #0044ED; border-color: #0044ED; }
 
+    @media (min-width: 1001px) {
+      .site-header,
+      header {
+        gap: 8px !important;
+      }
+
+      .site-header .main-nav,
+      header nav {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      .brand {
+        position: relative;
+        z-index: 3;
+      }
+
+      .nav-cta {
+        margin-left: auto;
+        position: relative;
+        z-index: 3;
+      }
+
+      .nav-cta + .theme-toggle {
+        margin-left: 0;
+        position: relative;
+        z-index: 3;
+      }
+    }
+
     html.dark-mode body { background: #0d1324; color: #d7deea; }
     html.dark-mode .site-header,
     html.dark-mode header,
