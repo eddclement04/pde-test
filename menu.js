@@ -113,6 +113,8 @@ document.addEventListener('DOMContentLoaded', function () {
     html.dark-mode .info-card strong,
     html.dark-mode .footer-grid h4,
     html.dark-mode .deliverable-item strong,
+    html.dark-mode .stat-value,
+    html.dark-mode .stat strong,
     html.dark-mode .service-feature-list div,
     html.dark-mode .filter-btn:not(.active),
     html.dark-mode .modal-info-list li { color: #eef3ff !important; }
@@ -151,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function () {
     html.dark-mode .section-head p,
     html.dark-mode .card p,
     html.dark-mode .project-content p,
+    html.dark-mode .stat-label,
     html.dark-mode .testimonial span,
     html.dark-mode .info-card span,
     html.dark-mode .footer-grid p,
@@ -170,7 +173,8 @@ document.addEventListener('DOMContentLoaded', function () {
     html.dark-mode .capability-icon,
     html.dark-mode .stat-icon,
     html.dark-mode .tag,
-    html.dark-mode .card-number { background: rgba(122, 162, 255, 0.16) !important; color: #7aa2ff !important; }
+    html.dark-mode .card-number,
+    html.dark-mode .process-step span { background: rgba(122, 162, 255, 0.16) !important; color: #7aa2ff !important; }
     html.dark-mode .page-hero { background: linear-gradient(rgba(8,13,25,0.9), rgba(8,13,25,0.9)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80') center/cover !important; }
     html.dark-mode .image-card,
     html.dark-mode .modal-content,
